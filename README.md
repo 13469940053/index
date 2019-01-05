@@ -9,6 +9,8 @@
 
 4.web简易音乐播放器：https://zhangcheng0126.gitee.io/index/
 
+5.音乐播放器-加文字滚动 、均衡器：https://13469940053.github.io/musicOnclick/
+
 
 
 ......
