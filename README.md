@@ -7,6 +7,8 @@
 
 3.Aplayer https://13469940053.github.io/HTML5play/#/
 
+4.web简易音乐播放器：https://zhangcheng0126.gitee.io/index/
+
 
 
 ......
