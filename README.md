@@ -11,6 +11,7 @@
 
 5.音乐播放器-加文字滚动 、均衡器：https://13469940053.github.io/musicOnclick/
 
+6.抖音部分特效源码分享：https://13469940053.github.io/ziyuan/抖音源码.html
 
 
 ......
