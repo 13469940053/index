@@ -13,6 +13,7 @@
 
 6.抖音部分特效源码分享：https://13469940053.github.io/ziyuan/抖音源码.html
 
+7.我的首页静态链接：https://13469940053.github.io/home/
 
 ......
 
