@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name ="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="">
+    <meta name="copyright" content="&copy; " />
+    <link rel="shortcut icon" href="favicon.png">
+    <title>张成分享----导航</title>
+    <!--判断用户端
+<script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js" type="text/javascript"></script>
+<script type="text/javascript">uaredirect("http://www.lolihd.com");</script>
+-->
+<!--判断结束-->
+<!--动态背景-->
+<link rel="stylesheet" type="text/css" href="common/css/lolihd.css" />
+<script type="text/javascript" src="common/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+    // uncomment the 3 lines below to pull the images in random order
+
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+</script>
+
+<script type="text/javascript"language="javascript">function AddFavorite(sURL,sTitle){sURL=encodeURI(sURL);try{window.external.addFavorite(sURL,sTitle);}catch(e){try{window.sidebar.addPanel(sTitle,sURL,"");}catch(e){alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");}}}
+function SetHome(url){if(document.all){document.body.style.behavior='url(#default#homepage)';document.body.setHomePage(url);}else{alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");}}</script>
+</head>
+
+<body>
+<!-- nav -->
+<div class="header">
+    <h1 class="header_logo">
+        <a href="" target="_blank">资料总览</a>
+    </h1>
+    <ul class="header_nav">
+        <li> <i></i>
+            <a href="https://13469940053.github.io/index/" target="_blank">主页</a>
+        </li>
+        <li> <i></i>
+            <a href="index1.html" target="_blank">之前的总览</a>
+        </li>
+        <li>
+            <i></i>
+            <a href="" target="_blank"></a>
+        </li>
+        <li>
+            <i></i>
+            <a href="https://wulangwang.xyz/" target="_blank">我的博客</a>
+        </li>
+    </ul>
+</div>
+
+<div id="lolihd">
+    <!--搜索-->
+    <div class="so_lolihd">
+        <div class="style_1">
+            <form action="javascript:void(0);" method="post" target="_blank" id="searchform">
+                <fieldset>
+                    <input id="q" name="q" type="text" value="无浪网" class="text_input" >
+                    <input id="baidu"name="" type="submit" value='百度一下'></fieldset>
+            </form>
+        </div>
+    </div>
+    <!--搜索结束-->
+    <div class="lolihd_content">
+        <div class="lolihd_preview_list">
+            <div>
+                <p>
+                    1.资源分享：
+                    <a href="https://13469940053.github.io/ziyuan/" target="_blank">https://13469940053.github.io/ziyuan/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    2.图片：
+                    <a href="https://13469940053.github.io/tuPian/" target="_blank">https://13469940053.github.io/ziyuan/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    3.Aplayer：
+                    <a href="https://13469940053.github.io/HTML5play/#/" target="_blank">https://13469940053.github.io/HTML5play/#/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    4.web简易音乐播放器：
+                    <a href="https://13469940053.github.io/webmusic/" target="_blank">https://13469940053.github.io/webmusic/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    5.音乐播放器-加文字滚动 、均衡器：
+                    <a href="https://13469940053.github.io/musicOnclick/" target="_blank">https://13469940053.github.io/musicOnclick/</a>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    6.抖音源码
+                    <a href="https://13469940053.github.io/ziyuan/抖音源码.html" target="_blank">https://13469940053.github.io/ziyuan/抖音源码.html</a>
+                </p>
+            </div>
+            <div>
+                <p>......</p>
+            </div>
+            <div>
+                <p>......</p>
+            </div>
+            <div class="footer_author">
+                <h3>多多关注小编哦</h3>
+            </div>
+            <div class="author">
+                <h3>
+                    网址链接：
+                    <a href="https://13469940053.github.io/home/" target="_blank">我的主页</a>
+                </h3>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- 背景 -->
+<div id="slideshow">
+<img src="common/images/1.jpg" alt="" class="active">
+<img src="common/images/2.jpg" alt="" />
+<img src="common/images/3.jpg" alt="" />
+<img src="common/images/4.jpg" alt="" />
+<img src="common/images/5.jpg" alt="" />
+</div>
+<!-- 作者信息 -->
+<div class="section">
+    <div class="author">
+        <div class="logo">
+            <font size="6">张成</font>
+        </div>
+        <div class="author_text">
+            <hr align="center" width="100%"  size="2" color="#00FFFF">
+            <hr align="center" width="100%"  size="10px" noshade="">
+            <div>
+                <h3>自我评价</h3>
+                <p>做事稳重、善于沟通。</p>
+                <p>喜欢思考、善于分析、适应能力强。</p>
+                <p>乐观开朗、诚信务实、有耐性能吃苦。</p>
+                <p>善于协调、勇于付出、敢于挑战自我。</p>
+                <hr align="center" width="100%"  size="2" color="#00FFFF">
+                <hr align="center" width="100%"  size="10px" noshade="">
+
+                <h3>个人爱好</h3>
+                <p>与人交流、唱歌、运动、打球。</p>
+                <p style="text-align:center; display:block;padding:10px;background:rgba(238,120,0,.5);border-radius:10px;font-weight: bold;margin:20px;">
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2508723631&site=qq&menu=yes">Q我吧！</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="music">
+
+
+
+        <embed src="https://music.163.com/outchain/player?type=2&id=39443402&auto=1&height=66-1" tppabs="http://music.163.com/outchain/player?type=2&id=39443402&auto=1&height=66" autostart="true" loop="true" width="400">
+      <!--    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="380" src="//music.163.com/outchain/player?type=0&amp;id=2531704188&amp;auto=1&amp;height=430"></iframe> -->
+    </div>
+</div>
+<!-- 底部信息 -->
+<div class="footer">
+Copyright &copy; 2019-3-29 &nbsp;
+<a href="http://www.wulangwang.top/index/index.html">zhangcheng</a>
+All Rights Reserved.
+<script type="text/javascript">
+         // 站长统计代码
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275245526'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275245526%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</script>
+<a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+</div>
+
+<script type="text/javascript">
+    var oBtn=document.getElementById('baidu');
+    var oq=document.getElementById('q');
+
+    oBtn.onclick=function(){
+        window.location='https:\/\/www.baidu.com/s?wd='+oq.value+'&rsv_spt=1&rsv_iqid=0xceac2f0b0003a177&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1';
+    }
+    document.onkeydown=function (ev){
+        var oEvent=ev||event;
+
+        if(oEvent.ctrlKey && oEvent.keyCode==13 ||oEvent.keyCode==13){
+            window.location='https:\/\/www.baidu.com/s?wd='+oq.value+'&rsv_spt=1&rsv_iqid=0xceac2f0b0003a177&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1';
+        }
+    };
+
+    </script>
+</body>
+</html>
