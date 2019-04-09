@@ -197,13 +197,77 @@ a{text-decoration: none;color: #000;}
 	.style_5 #searchform input[type='submit'] { background-color:#ff8a00; }
 	.style_1, .style_2, .style_3, .style_4, .style_5 { /*margin:10px;*/ display:block; clear:both }
 /*---音乐-----*/
-.section{
-	position: absolute;
-    top: 100px;
-    right: 60px;
-    background-color: rgba(255,255,255,.8);
+
+/* //<=768的设备*/
+@media screen and (max-width:1000px) {
+	.section .author{
+		width: 870px;
+	    margin: 0 auto;
+	    border-radius: 10px;
+		background-color: rgba(255,255,255,.8);
+	    padding: 20px 0;
+	}
+	.section .music{
+		width: 870px;
+	    margin: 0 auto;
+	}
+	.section .music embed{
+		width: 870px;
+	}
 }
-.section .author{width:400px;}
+/*>600px*/
+@media (min-width:1000px){
+	.section{
+			position: absolute;
+			top: 100px;
+		    right: 60px;
+			border-radius: 10px;
+		   	background-color: rgba(255,255,255,.8);}
+	.section .author{width:400px;}
+	.section .music{
+			position:absolute;
+			right:-10px;
+		}
+	.section .music embed{
+		width: 420px;
+	}
+}
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+	.section{
+		position: absolute;
+	    top: 100px;
+	    right: 60px;
+	    background-color: rgba(255,255,255,.8);
+
+	.section .author{width:400px;}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .section .author .logo{
 	width:100px;height: 100px;
 	border-radius: 50%;
@@ -214,16 +278,11 @@ a{text-decoration: none;color: #000;}
 .section .author .logo font{
 	color: #fff;
 	line-height: 100px;
-
 }
+
 .author_text{margin: 10px;}
 .author_text div{margin: 10px;}
 .author_text p{padding:5px;}
-.section .music{
-	position:absolute;
-	right:0px;
-	z-index:-1;
-}
 
 
 /**/
