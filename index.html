@@ -1,0 +1,245 @@
+﻿<!Doctype html>
+<html>
+
+<head>
+    <title>导航索引-无浪网|无风不起浪网</title>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="张成分享导航页" />
+    <meta name="description" content="素材分享，资源分享" />
+    <meta name="author" content="张成，2508723631@qq.com">
+    <meta name="copyright" content="&copy; " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+    <script type="text/javascript" src="./static/js/jquery-1.2.6.min.js"></script>
+    <script type="text/javascript">
+        function slideSwitch() {
+            var $active = $('#slideshow img.active');
+
+            if ($active.length == 0) $active = $('#slideshow img:last');
+            var $next = $active.next().length ? $active.next()
+                : $('#slideshow img:first');
+
+            // var $sibs  = $active.siblings();
+            // var rndNum = Math.floor(Math.random() * $sibs.length );
+            // var $next  = $( $sibs[ rndNum ] );
+            $active.addClass('last-active');
+            $next.css({ opacity: 0.0 })
+                .addClass('active')
+                .animate({ opacity: 1.0 }, 1000, function () {
+                    $active.removeClass('active last-active');
+                });
+        }
+        
+        
+        $(function () {
+            setInterval("slideSwitch()", 5000);
+        });
+
+        function AddFavorite(sURL, sTitle) { 
+            sURL = encodeURI(sURL); 
+            try { 
+                window.external.addFavorite(sURL, sTitle); 
+            } catch (e) { 
+                try { 
+                    window.sidebar.addPanel(sTitle, sURL, ""); 
+                } catch (e) { 
+                    alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置."); 
+                } 
+            } 
+        }
+        
+        function SetHome(url) { 
+            if (document.all) { 
+                document.body.style.behavior = 'url(#default#homepage)'; document.body.setHomePage(url); 
+            } else {
+                alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!"); 
+            } 
+        }
+            
+        console.log("%c 资料总览 www.wulangwang.top/index", "background: rgba(252,234,187,1);color:red;font-size:20px");
+    </script>
+    <script type="text/javascript">
+        // $(document).ready(function () {}); 
+        window.onload=function(){
+            var oBtn = document.getElementById('baidu');
+            var oq = document.getElementById('q');
+
+            oBtn.onclick = function () {
+                window.open('https:\/\/www.baidu.com/s?wd=' + oq.value + '&rsv_spt=1&rsv_iqid=0xceac2f0b0003a177&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1');
+            }
+            document.onkeydown = function (ev) {
+                var oEvent = ev || event;
+
+                if (oEvent.ctrlKey && oEvent.keyCode == 13 || oEvent.keyCode == 13) {
+                    window.location = 'https:\/\/www.baidu.com/s?wd=' + oq.value + '&rsv_spt=1&rsv_iqid=0xceac2f0b0003a177&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=1';
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <h1 class="header_logo">
+            <a href="" target="_blank"><img class="logo" src="favicon.svg">资料总览</a>
+        </h1>
+
+        <ul class="header_nav">
+            <li> <i></i>
+                <a href="https://13469940053.github.io/index/" target="_blank">主页</a>
+            </li>
+            <li> <i></i>
+                <a href="index1.html" target="_blank">之前的总览</a>
+            </li>
+            <li>
+                <i></i>
+                <a href="https://wulangwang.top/" target="_blank">我的博客</a>
+            </li>
+        </ul>
+    </header>
+
+    <center>
+        <!--搜索-->
+        <form action="javascript:void(0);" method="post" target="_blank" id="searchform">
+            <fieldset>
+                <!-- <legend>搜索:</legend> -->
+                <input id="q" name="q" type="text" value="无浪网 无风不起浪网">
+                <input id="baidu" name="" type="submit" value='百度一下'>
+            </fieldset>
+        </form>
+    </center>
+    <article>
+        <section>
+            <div class="list">
+               <div>
+                <p>
+                    1.资源分享：
+                    <a href="https://13469940053.github.io/ziyuan/" target="_blank">https://13469940053.github.io/ziyuan/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    2.图片：
+                    <a href="https://13469940053.github.io/tuPian/" target="_blank">https://13469940053.github.io/tupian/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    3.Aplayer：
+                    <a href="https://13469940053.github.io/APlayer" target="_blank">https://13469940053.github.io/APlayer</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    4.web简易音乐播放器：
+                    <a href="https://13469940053.github.io/webmusic/" target="_blank">https://13469940053.github.io/webmusic/</a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    5.音乐播放器-加文字滚动 、均衡器：
+                    <a href="https://13469940053.github.io/musicOnclick/" target="_blank">https://13469940053.github.io/musicOnclick/</a>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    6.抖音源码
+                    <a href="https://13469940053.github.io/ziyuan/抖音源码.html" target="_blank">https://13469940053.github.io/ziyuan/抖音源码.html</a>
+                </p>
+            </div>
+            <div>
+                 <p> 7.Adobe AI cs6软件  提取码：5iyo
+                 <a href="https://pan.baidu.com/s/140YZS3Q9hxilUNH39uiZnQ" target="_blank">https://pan.baidu.com/s/140YZS3Q9hxilUNH39uiZnQ</a></p>
+            </div>
+            <div>
+                 <p> 8.颜色配色
+                 <a href="https://13469940053.github.io/img/" target="_blank">https://13469940053.github.io/img/</a></p>
+            </div>
+            <div>
+                <p>......</p>
+            </div>
+            <div class="footer_author">
+                 <a href="https://13469940053.github.io/home/" target="_blank"><p>多多关注小编哦
+				我的主页
+				 </p></a>
+            </div>
+          
+
+            </div>
+        </section>
+        <aside>
+            <div class="author">
+                <div class="author_logo">
+                    <font size="6">张成</font>
+                </div>
+                <div class="author_text">
+                    <hr align="center" width="100%" size="2" color="#00FFFF" noshade="">
+
+                    <div>
+                        <h3>自我评价</h3>
+                        <p>做事稳重。</p>
+                        <p>喜欢思考、善于分析。</p>
+                        <p>乐观开朗、诚信务实。</p>
+                        <p>勇于付出、敢于挑战自我。</p>
+                        <hr align="center" width="100%" size="10px" noshade="">
+
+                        <h3>个人爱好</h3>
+                        <p>唱歌、运动、打球。</p>
+                       
+                    <a style="text-align:center; display:block;padding:10px;background:rgba(238,120,0,.5);border-radius:10px;font-weight: bold;margin:20px;"target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2508723631&site=qq&menu=yes">Q我吧！</a>
+               
+               
+
+                    <a class="xz" target="_blank" href="https://zhangcheng2020.lanzouy.com/iHMsGyyrt9i">APP下载</a>
+
+               
+
+                    <a class="xz" target="_blank" href="http://13469940053.github.io/boke.apk">备用下载</a>
+
+               
+                    </div>
+                </div>
+                <div class="author_music">
+                    <embed src="https://music.163.com/outchain/player?type=2&id=39443402&auto=1&height=66-1"
+                        tppabs="http://music.163.com/outchain/player?type=2&id=39443402&auto=1&height=66"
+                        autostart="true" loop="true" width="">
+                    <!--  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="380" src="//music.163.com/outchain/player?type=0&amp;id=2531704188&amp;auto=1&amp;height=430"></iframe> -->
+                </div>
+            </div>
+        </aside>
+    </article>
+    <!-- 底部 -->
+    <footer>
+        <div class="footer">
+            <p> <span>Copyright &copy; 2019-3-29 &nbsp;<a
+                        href="http://www.wulangwang.top/index/index.html">zhangcheng</a>All Rights Reserved.</span>
+
+                <span class="tj">
+                    <!-- 站长统计代码 -->
+                    <script type="text/javascript">
+                        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1275245526'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275245526%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                    <a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+                    <a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+                </span>
+            </p>
+        </div>
+    </footer>
+    <!-- 背景 -->
+    <div id="slideshow">
+        <img src="static/images/0.jpg" alt="" class="active">
+        <img src="static/images/1.jpg" alt="" />
+        <img src="static/images/2.jpg" alt="" />
+        <img src="static/images/3.jpg" alt="" />
+        <img src="static/images/4.jpg" alt="" />
+        <img src="static/images/5.jpg" alt="" />
+    </div>
+</body>
+
+</html>
